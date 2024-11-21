@@ -40,9 +40,8 @@
     "dev": "npm run dev:client & npm run dev:logic",
     "dev:client": "react-scripts start",
     "dev:logic": "rollup -c --watch",
-    "build": "npm run lint && DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false react-scripts build && rollup -c",
-    "deploy": "../../scripts/copy-assets.sh oink-oink && yarn build && rune upload build",
-    "lint": "eslint src"
+    "build": "react-scripts build && rollup -c",
+    "deploy": "../../scripts/copy-assets.sh oink-oink && yarn build && rune upload build"
   },
   "browserslist": {
     "production": [
